@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orangic News Redirection</title>
+</head>
+<body>
+	<script>
+		var fullurl = window.location.href;
+
+		function gup( name, url ) {
+    		if (!url) url = location.href;
+    		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    		var regexS = "[\\?&]"+name+"=([^&#]*)";
+    		var regex = new RegExp( regexS );
+    		var results = regex.exec( url );
+    		return results == null ? null : results[1];
+		}
+
+		var newurl = gup('newsurl', fullurl);
+
+		if (newurl.trim() === 'ekantipur'.trim()) {
+
+			window.location.href = 'http://www.ekantipur.com/';
+
+		}else if (newurl.trim() === 'appantv'.trim()) {
+
+			window.location.href = 'http://www.appantv.com.np/';
+
+		}else if (newurl.trim() === 'appantv'.trim()) {
+
+			window.location.href = 'http://www.appantv.com.np/';
+
+		}else{
+
+			window.location.href = 'https://learnmoreskill.github.io/orangic/invalidlink.html';
+
+		}
+
+		
+
+	</script>
+
+</body>
+</html>
