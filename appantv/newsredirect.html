@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+</head>
+<body>
+	<script>
+		var fullurl = window.location.href;
+		function gup( name, url ) {
+    		if (!url) url = location.href;
+    		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    		var regexS = "[\\?&]"+name+"=([^&#]*)";
+    		var regex = new RegExp( regexS );
+    		var results = regex.exec( url );
+    		return results == null ? null : results[1];
+		}
+		var newurl = gup('newsurl', fullurl);
+		if (newurl.trim() === 'ekantipur'.trim()) {
+			window.location.href = 'http://www.ekantipur.com/';
+		}else if (newurl.trim() === 'appantv'.trim()) {
+			window.location.href = 'http://www.appantv.com.np/';
+		}else if (newurl.trim() === 'ratopati'.trim()) {
+			window.location.href = 'https://ratopati.com/';
+		}else if (newurl.trim() === 'nepalsamaya'.trim()) {
+			window.location.href = 'https://nepalsamaya.com/';
+		}else if (newurl.trim() === 'thahakhabar'.trim()) {
+			window.location.href = 'http://thahakhabar.com/';
+		}else if (newurl.trim() === 'onlinekhabar'.trim()) {
+			window.location.href = 'https://www.onlinekhabar.com/';
+		}else if (newurl.trim() === 'unn'.trim()) {
+			window.location.href = 'http://www.unn.com.np/';
+		}else if (newurl.trim() === 'enewsbureau'.trim()) {
+			window.location.href = 'http://enewsbureau.com/';
+		}else if (newurl.trim() === 'setopati'.trim()) {
+			window.location.href = 'https://setopati.com/';
+		}else{
+			window.location.href = 'https://learnmoreskill.github.io/orangic/invalidlink.html';
+		}
+		
+	</script>
+	<h2>Invalid parameter...</h2>
+
+</body>
+</html>
